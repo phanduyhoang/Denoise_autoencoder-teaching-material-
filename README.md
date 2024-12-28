@@ -46,6 +46,10 @@ The autoencoder consists of:
 
 ### 3. Residual Connections
 - **Skip connections** are added to the decoder to reuse spatial information from the encoder. This improves reconstruction quality and helps retain finer details.
+### Residual Connections Matter!
+This project demonstrates the importance of **residual connections** in autoencoders. Residuals allow the decoder to access features directly from the encoder, improving reconstruction quality. 
+
+Try removing the residual connections in the code, and you’ll see how the results can get **real messed up**—with blurry and oversimplified outputs. Residuals make a **huge difference**!
 
 ### 4. Loss Function
 - The model uses **Mean Squared Error (MSE)** as the loss function. Optionally, a **perceptual loss** combining MSE and SSIM can be used for better perceptual quality.
